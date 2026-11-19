@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ykono Hair Studio | Peluquería en Alcobendas</title>
+<meta name="description" content="Ykono Hair Studio, peluquería en la avenida de la Ermita 1 de Alcobendas. Color, mechas, corte, tratamientos con producto natural y recogidos de boda. 4,7★ con 174 reseñas en Google.">
+<meta name="theme-color" content="#f7efe9">
+<meta property="og:title" content="Ykono Hair Studio · Alcobendas">
+<meta property="og:description" content="Ykono Hair Studio, peluquería en la avenida de la Ermita 1 de Alcobendas. Color, mechas, corte, tratamientos con producto natural y recogidos de boda. 4,7★ con 174 reseñas en Google.">
+<meta property="og:image" content="maps_02.jpg">
+<link rel="icon" href="maps_01.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf8f4; --blush:#f1ebe2; --blush-2:#ddcdb4; --rose:#a08562; --rose-dark:#6f5a3f; --mauve:#1e1d1c; --ink:#1a1918; --soft:#77706a;
+    --line:rgba(91,58,63,.14); --radius:22px; --display:'Playfair Display',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+    --header-h:84px; --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:var(--header-h);}
+  body{font-family:var(--body);background:var(--cream);color:var(--ink);line-height:1.75;font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{max-width:100%;display:block;} a{color:inherit;text-decoration:none;} ul{list-style:none;}
+  button{font:inherit;cursor:pointer;border:0;background:none;color:inherit;}
+  .container{width:min(1160px,100% - 40px);margin-inline:auto;}
+  .section{padding:clamp(80px,11vw,130px) 0;position:relative;overflow:hidden;}
+  .section.tint{background:var(--blush);}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--rose-dark);font-weight:500;}
+  .eyebrow::before,.head.center .eyebrow::after{content:"";width:26px;height:1px;background:var(--rose);}
+  .title{font-family:var(--display);font-weight:600;font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.05;letter-spacing:0;margin:16px 0 20px;color:var(--mauve);}
+  .title em,.hero-title em,.cta-band h2 em{font-style:italic;color:var(--rose);}
+  .lead{color:var(--soft);max-width:600px;font-size:1.04rem;}
+  .head{margin-bottom:56px;position:relative;z-index:1;} .head.center{text-align:center;} .head.center .lead{margin-inline:auto;}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease);} .reveal.on{opacity:1;transform:none;}
+  .petal{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(236,210,198,.7),rgba(236,210,198,0) 70%);pointer-events:none;z-index:0;}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 30px;border-radius:999px;font-size:.8rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;transition:transform .3s var(--ease),background .3s,color .3s,box-shadow .3s;white-space:nowrap;border:1px solid var(--mauve);}
+  .btn svg{width:18px;height:18px;flex-shrink:0;}
+  .btn-outline{color:var(--mauve);} .btn-outline:hover{background:var(--mauve);color:var(--cream);transform:translateY(-2px);}
+  .btn-solid{background:var(--rose);border-color:var(--rose);color:#fff;}
+  .btn-solid:hover{background:var(--rose-dark);border-color:var(--rose-dark);transform:translateY(-2px);box-shadow:0 16px 30px -14px var(--rose);}
+  .btn-wa{background:#25d366;border-color:#25d366;color:#06280f;} .btn-wa:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(37,211,102,.6);}
+
+  .header{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--header-h);display:flex;align-items:center;transition:background .4s,box-shadow .4s;}
+  .header.scrolled{background:rgba(251,246,242,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+  .logo{display:flex;align-items:center;gap:12px;}
+  .logo img{width:50px;height:50px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px var(--rose),0 0 0 4px var(--cream),0 0 0 5px var(--blush-2);}
+  .logo-txt{display:flex;flex-direction:column;line-height:1;}
+  .logo-mark{font-family:var(--display);font-weight:600;font-size:1.55rem;color:var(--mauve);}
+  .logo-mark span{font-style:italic;color:var(--rose);}
+  .logo-sub{font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;color:var(--soft);margin-top:5px;}
+  .nav-links{display:flex;align-items:center;gap:28px;}
+  .nav-links a{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:400;position:relative;padding:6px 0;transition:color .3s;color:var(--mauve);}
+  .nav-links a::after{content:"";position:absolute;left:50%;bottom:0;width:5px;height:5px;border-radius:50%;background:var(--rose);transform:translateX(-50%) scale(0);transition:transform .3s var(--ease);}
+  .nav-links a:hover{color:var(--rose-dark);} .nav-links a:hover::after{transform:translateX(-50%) scale(1);}
+  .nav-links .mobile-only{display:none;} .nav-links a.btn::after{display:none;} .nav-links a.btn{color:#fff;} .nav-cta{padding:12px 22px;}
+  .menu-toggle{display:none;width:44px;height:44px;position:relative;z-index:120;}
+  .menu-toggle span{position:absolute;left:10px;right:10px;height:1.5px;background:var(--mauve);transition:transform .35s var(--ease),opacity .25s,top .35s var(--ease);}
+  .menu-toggle span:nth-child(1){top:15px;} .menu-toggle span:nth-child(2){top:21px;} .menu-toggle span:nth-child(3){top:27px;}
+  .menu-open .menu-toggle span:nth-child(1){top:21px;transform:rotate(45deg);} .menu-open .menu-toggle span:nth-child(2){opacity:0;} .menu-open .menu-toggle span:nth-child(3){top:21px;transform:rotate(-45deg);}
+
+  .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:calc(var(--header-h) + 30px) 0 70px;overflow:hidden;background:linear-gradient(160deg,var(--cream) 0%,var(--blush) 100%);}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(30px,6vw,80px);align-items:center;position:relative;z-index:1;}
+  .hero-title{font-family:var(--display);font-weight:600;font-size:clamp(3rem,7.4vw,5.8rem);line-height:1;margin:20px 0 24px;letter-spacing:0;color:var(--mauve);}
+  .hero-text{font-size:clamp(1rem,1.6vw,1.12rem);color:var(--soft);max-width:520px;margin-bottom:34px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;}
+  .hero-rating{display:inline-flex;align-items:center;gap:10px;margin-top:36px;font-size:.88rem;color:var(--soft);background:#fff;padding:10px 20px;border-radius:999px;box-shadow:0 10px 30px -18px rgba(91,58,63,.4);}
+  .hero-rating b{color:var(--mauve);font-family:var(--display);font-size:1.3rem;}
+  .hero-rating .st{color:var(--rose);letter-spacing:2px;}
+  .hero-media{position:relative;justify-self:center;width:min(440px,100%);}
+  .hero-bg{aspect-ratio:4/5;border-radius:999px 999px var(--radius) var(--radius);overflow:hidden;box-shadow:0 40px 80px -40px rgba(91,58,63,.55);}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;animation:zoom 18s ease-out forwards;transform:scale(1.08);}
+  .hero-bg img:not(:first-child){display:none;}
+  .hero-media::before{content:"";position:absolute;inset:-18px;border:1px solid var(--rose);border-radius:999px 999px calc(var(--radius) + 18px) calc(var(--radius) + 18px);opacity:.5;}
+  .hero-small{position:absolute;left:-60px;bottom:40px;width:150px;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--cream);box-shadow:0 20px 40px -20px rgba(91,58,63,.5);}
+  .hero-small img{width:100%;height:100%;object-fit:cover;}
+  @keyframes zoom{to{transform:scale(1);}}
+
+  .stats{background:var(--mauve);color:var(--cream);padding:30px 0;}
+  .stats .grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:20px;}
+  .stats b{display:block;font-family:var(--display);font-weight:600;font-size:1.9rem;font-style:italic;color:#f3cfc3;}
+  .stats span{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:#e7d6d0;}
+
+  .about-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(40px,7vw,100px);align-items:center;position:relative;z-index:1;}
+  .about-media{position:relative;}
+  .about-media .img-main{aspect-ratio:4/5;border-radius:var(--radius) 160px var(--radius) var(--radius);overflow:hidden;}
+  .about-media img{width:100%;height:100%;object-fit:cover;}
+  .badge{position:absolute;right:-18px;bottom:30px;background:#fff;color:var(--mauve);border-radius:50%;width:130px;height:130px;display:grid;place-content:center;text-align:center;box-shadow:0 24px 50px -24px rgba(91,58,63,.5);}
+  .badge .num{font-family:var(--display);font-weight:600;font-size:2rem;line-height:1;color:var(--rose);}
+  .badge .lbl{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;margin-top:6px;color:var(--soft);}
+  .about-text p{color:var(--soft);margin-bottom:18px;} .about-text strong{color:var(--mauve);font-weight:500;}
+  .quote{margin-top:28px;padding:24px 28px;background:var(--blush);border-radius:var(--radius);font-family:var(--display);font-style:italic;font-size:1.25rem;line-height:1.45;color:var(--mauve);position:relative;}
+  .quote cite{display:block;margin-top:10px;font-family:var(--body);font-style:normal;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);}
+  .pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px;}
+  .pillar{padding:20px 22px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;}
+  .pillar h3{font-family:var(--display);font-weight:600;font-size:1.35rem;margin-bottom:4px;color:var(--mauve);}
+  .pillar p{font-size:.88rem;color:var(--soft);margin:0;line-height:1.55;}
+
+  .s-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;position:relative;z-index:1;}
+  .s-card{background:#fff;border-radius:var(--radius);overflow:hidden;transition:transform .4s var(--ease),box-shadow .4s;box-shadow:0 20px 40px -32px rgba(91,58,63,.45);}
+  .s-card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(91,58,63,.55);}
+  .s-card .ph{aspect-ratio:4/3;overflow:hidden;margin:10px 10px 0;border-radius:calc(var(--radius) - 8px);}
+  .s-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+  .s-card:hover .ph img{transform:scale(1.06);}
+  .s-card .tx{padding:20px 24px 26px;text-align:center;}
+  .s-card h3{font-family:var(--display);font-weight:600;font-size:1.55rem;margin-bottom:4px;color:var(--mauve);}
+  .s-card p{font-size:.88rem;color:var(--soft);margin:0;}
+  .s-note{text-align:center;color:var(--soft);font-size:.92rem;margin-top:36px;position:relative;z-index:1;}
+
+  .g-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:420px;gap:18px;position:relative;z-index:1;}
+  .g-grid figure{border-radius:var(--radius);overflow:hidden;cursor:zoom-in;position:relative;}
+  .g-grid figure:nth-child(2){border-radius:999px 999px var(--radius) var(--radius);}
+  .g-grid figure.tall{grid-row:span 2;}
+  .g-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+  .g-grid figure:hover img{transform:scale(1.05);}
+  .lightbox{display:none;position:fixed;inset:0;z-index:300;background:rgba(74,50,54,.92);align-items:center;justify-content:center;padding:24px;cursor:zoom-out;}
+  .lightbox.open{display:flex;} .lightbox img{max-height:90vh;border-radius:var(--radius);}
+
+  .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:1;}
+  .t-card{background:#fff;border-radius:var(--radius);padding:32px 28px;display:flex;flex-direction:column;box-shadow:0 20px 40px -32px rgba(91,58,63,.45);}
+  .t-stars{color:var(--rose);letter-spacing:.12em;margin-bottom:14px;}
+  .t-card p{font-family:var(--display);font-style:italic;font-size:1.18rem;line-height:1.5;color:var(--mauve);margin-bottom:18px;flex:1;}
+  .t-card cite{font-style:normal;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);}
+
+  .cta-band{position:relative;padding:clamp(70px,9vw,110px) 0;text-align:center;overflow:hidden;background:linear-gradient(135deg,var(--blush-2),var(--blush) 60%,var(--cream));}
+  .cta-band h2{font-family:var(--display);font-weight:600;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.05;margin-bottom:14px;color:var(--mauve);}
+  .cta-band p{color:var(--soft);margin-bottom:30px;}
+  .cta-band .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+
+  .c-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:30px;align-items:stretch;position:relative;z-index:1;}
+  .c-card{background:#fff;border-radius:var(--radius);padding:clamp(28px,4vw,42px);box-shadow:0 20px 40px -32px rgba(91,58,63,.45);}
+  .c-item{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);}
+  .c-item:first-child{padding-top:0;} .c-item:last-of-type{border-bottom:0;}
+  .c-item .ic{width:44px;height:44px;flex-shrink:0;border-radius:50%;display:grid;place-items:center;background:var(--blush);color:var(--rose-dark);}
+  .c-item .ic svg{width:19px;height:19px;}
+  .c-item h3{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--rose-dark);font-weight:500;margin-bottom:4px;}
+  .c-item p,.c-item a{color:var(--ink);font-size:.98rem;}
+  .hours{width:100%;border-collapse:collapse;font-size:.93rem;}
+  .hours td{padding:3px 0;color:var(--ink);vertical-align:top;} .hours td:last-child{text-align:right;}
+  .c-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px;}
+  .map{border-radius:var(--radius);overflow:hidden;min-height:380px;position:relative;}
+  .map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+
+  .footer{padding:64px 0 30px;background:var(--mauve);color:#e7d6d0;}
+  .footer .logo-mark{color:var(--cream);} .footer .logo-mark span{color:#f3cfc3;} .footer .logo-sub{color:#cdb5b0;}
+  .f-top{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid rgba(251,246,242,.15);}
+  .f-brand p{max-width:330px;font-size:.9rem;margin-top:16px;}
+  .f-nav{display:flex;gap:60px;flex-wrap:wrap;}
+  .f-nav h4{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#f3cfc3;font-weight:500;margin-bottom:14px;}
+  .f-nav li{margin-bottom:8px;font-size:.9rem;}
+  .f-bottom{padding-top:24px;font-size:.8rem;text-align:center;}
+  .f-bottom strong{color:var(--cream);font-weight:500;}
+  .wa-float{position:fixed;bottom:22px;right:22px;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 26px -6px rgba(37,211,102,.6);z-index:90;}
+  .wa-float svg{width:30px;height:30px;fill:#fff;}
+
+  @media(max-width:900px){
+    :root{--header-h:72px;}
+    .menu-toggle{display:block;} .nav-cta.desktop{display:none;}
+    .nav-links{position:fixed;inset:0;z-index:110;flex-direction:column;justify-content:center;gap:22px;background:rgba(251,246,242,.98);opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;}
+    .nav-links a{font-family:var(--display);font-size:2rem;text-transform:none;letter-spacing:0;}
+    .nav-links .btn{font-family:var(--body);font-size:.85rem;margin-top:12px;text-transform:uppercase;letter-spacing:.14em;}
+    .menu-open .nav-links{opacity:1;visibility:visible;} .nav-links .mobile-only{display:block;} .menu-open{overflow:hidden;}
+    .hero-grid,.about-grid,.c-grid{grid-template-columns:1fr;}
+    .hero{min-height:auto;} .hero-media{width:min(360px,86%);margin-top:20px;} .hero-small{left:-30px;width:110px;}
+    .about-media{max-width:460px;margin-inline:auto;width:100%;}
+    .badge{right:0;width:110px;height:110px;}
+    .s-grid{grid-template-columns:repeat(2,1fr);}
+    .g-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:240px;}
+    .t-grid{grid-template-columns:1fr;}
+    .stats .grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media(max-width:600px){
+    .container{width:calc(100% - 32px);}
+    .pillars{grid-template-columns:1fr;}
+    .hero-actions .btn{flex:1 1 100%;}
+    .c-actions{grid-template-columns:1fr;}
+    .logo-sub{display:none;}
+    .s-grid{grid-template-columns:1fr;}
+    .g-grid{grid-template-columns:1fr;grid-auto-rows:280px;}
+  }
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.hero-bg img{animation:none;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <nav class="container nav" aria-label="Navegación principal">
+    <a href="#inicio" class="logo" aria-label="Ykono Hair Studio, inicio">
+      <span class="logo-txt"><span class="logo-mark">Ykono <span>Hair Studio</span></span><span class="logo-sub">Peluquería · Alcobendas</span></span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#nosotros">Nosotras</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#trabajos">El salón</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li class="mobile-only"><a href="https://wa.me/34690860742?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Ykono%20Hair%20Studio" class="btn btn-solid" target="_blank" rel="noopener">Pedir cita</a></li>
+    </ul>
+    <a href="https://wa.me/34690860742?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Ykono%20Hair%20Studio" class="btn btn-solid nav-cta desktop" target="_blank" rel="noopener">Pedir cita</a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="petal" style="width:520px;height:520px;right:-120px;top:-120px"></div>
+  <div class="petal" style="width:380px;height:380px;left:-140px;bottom:-120px"></div>
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <span class="eyebrow reveal">Alcobendas · Peluquería</span>
+      <h1 class="hero-title reveal">Tu pelo,<br><em>como nunca.</em></h1>
+      <p class="hero-text reveal">Peluquería en la avenida de la Ermita de Alcobendas. Pilar, Silvia, Mayte y el equipo te asesoran y cuidan tu pelo con producto natural: color, mechas, corte, tratamientos y recogidos.</p>
+      <div class="hero-actions reveal">
+        <a href="https://wa.me/34690860742?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Ykono%20Hair%20Studio" class="btn btn-solid" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg> Pedir cita</a>
+        <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+      </div>
+      <div class="hero-rating reveal"><span class="st">★★★★★</span><b>4,7</b> · 174 reseñas en Google</div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="hero-bg" role="img" aria-label="Interior de Ykono Hair Studio en Alcobendas"><img src="maps_02.jpg" alt=""><img src="maps_05.jpg" alt=""><img src="maps_03.jpg" alt=""></div>
+      <div class="hero-small"><img src="maps_10.jpg" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container grid">
+    <div><b>4,7★</b><span>174 reseñas en Google</span></div>
+    <div><b>Lun–vie</b><span>10:00–19:00</span></div>
+    <div><b>Sábado</b><span>9:30–14:00</span></div>
+    <div><b>Producto</b><span>Natural</span></div>
+  </div>
+</div>
+
+<section class="section" id="nosotros">
+  <div class="petal" style="width:420px;height:420px;right:-160px;top:40px"></div>
+  <div class="container about-grid">
+    <div class="about-media reveal">
+      <div class="img-main"><img src="maps_01.jpg" alt="Fachada de Ykono Hair Studio en Alcobendas" loading="lazy"></div>
+      <div class="badge"><div class="num">4,7★</div><div class="lbl">174 reseñas</div></div>
+    </div>
+    <div class="about-text">
+      <span class="eyebrow reveal">Nuestro salón</span>
+      <h2 class="title reveal">Te asesoramos,<br><em>sin agobiarte.</em></h2>
+      <p class="reveal">En <strong>Ykono Hair Studio</strong> escuchamos lo que quieres y te aconsejamos para que quede todavía mejor. Usamos producto natural, también en el color con barros y óleos, y nunca te metemos productos por los ojos.</p>
+      <p class="reveal">Estamos en la <strong>avenida de la Ermita, 1, local 5</strong>, en Alcobendas. De lunes a viernes de 10:00 a 19:00 y los sábados de 9:30 a 14:00. Un salón tranquilo, con un buen café mientras te cuidamos.</p>
+      <div class="quote reveal">"Me han hecho un cambio radical, pero todo lo que esperaba desde hace años: el color de las mechas rubias, el corte, la atención… Un trato súper natural y respetuoso."<cite>— Aurelie R, Google</cite></div>
+      <div class="pillars">
+        <div class="pillar reveal"><h3>Producto natural</h3><p>También en el color.</p></div>
+        <div class="pillar reveal"><h3>Recogidos</h3><p>Para bodas y eventos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="servicios">
+  <div class="container">
+    <div class="head center">
+      <span class="eyebrow reveal">Servicios</span>
+      <h2 class="title reveal">Para ti, <em>con mimo</em></h2>
+      <p class="lead reveal">Lo que hacemos en Ykono.</p>
+    </div>
+    <div class="s-grid">
+      <article class="s-card"><div class="ph"><img src="maps_09.jpg" alt="Corte" loading="lazy"></div><div class="tx"><h3>Corte</h3><p>A tu medida.</p></div></article>
+      <article class="s-card"><div class="ph"><img src="maps_06.jpg" alt="Color natural" loading="lazy"></div><div class="tx"><h3>Color natural</h3><p>Barros y óleos.</p></div></article>
+      <article class="s-card"><div class="ph"><img src="maps_05.jpg" alt="Mechas" loading="lazy"></div><div class="tx"><h3>Mechas</h3><p>Rubios con luz.</p></div></article>
+      <article class="s-card"><div class="ph"><img src="maps_03.jpg" alt="Tratamientos" loading="lazy"></div><div class="tx"><h3>Tratamientos</h3><p>Pelo sano.</p></div></article>
+      <article class="s-card"><div class="ph"><img src="maps_08.jpg" alt="Recogidos" loading="lazy"></div><div class="tx"><h3>Recogidos</h3><p>Bodas y eventos.</p></div></article>
+      <article class="s-card"><div class="ph"><img src="maps_10.jpg" alt="Trenzas" loading="lazy"></div><div class="tx"><h3>Trenzas</h3><p>Peinados con detalle.</p></div></article>
+    </div>
+    <p class="s-note reveal">Consulta precios y disponibilidad por WhatsApp o llamando al 690 86 07 42.</p>
+  </div>
+</section>
+
+<section class="section" id="trabajos">
+  <div class="container">
+    <div class="head center">
+      <span class="eyebrow reveal">El salón</span>
+      <h2 class="title reveal">Ykono <em>Hair Studio</em></h2>
+      <p class="lead reveal">Trabajos reales y nuestro salón de Alcobendas.</p>
+    </div>
+    <div class="g-grid">
+      <figure><img src="maps_08.jpg" alt="Recogido de boda" loading="lazy"></figure>
+      <figure><img src="maps_10.jpg" alt="Recogido con trenza" loading="lazy"></figure>
+      <figure><img src="maps_09.jpg" alt="Corte corto" loading="lazy"></figure>
+      <figure><img src="maps_02.jpg" alt="Nuestro salón" loading="lazy"></figure>
+      <figure><img src="maps_06.jpg" alt="Color natural" loading="lazy"></figure>
+      <figure><img src="maps_01.jpg" alt="Nuestra fachada" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section tint" id="opiniones">
+  <div class="container">
+    <div class="head center">
+      <span class="eyebrow reveal">Opiniones</span>
+      <h2 class="title reveal">Lo que dicen <em>nuestras clientas</em></h2>
+      <p class="lead reveal">4,7 estrellas de media con 174 reseñas en Google.</p>
+    </div>
+    <div class="t-grid">
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Fui para un recogido de boda. La peluquera me asesoró en todo momento: yo iba con una idea y la modificó para que quedase mejor. Quedó precioso y aguantó todo el día."</p><cite>Sheila García del Nogal</cite></div>
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Las chicas, súper atentas, te tratan muy bien y, lo más importante, no te meten sus productos por los ojos. Pilar me ha tratado el pelo de diez."</p><cite>Ana Belén Cueva Jiménez</cite></div>
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Siempre muy amables, atentos y profesionales. La atmósfera es muy relajante y los productos que usan son naturales. Silvia sabe lo que necesita tu pelo antes de que le digas nada."</p><cite>Victoria Schimbator</cite></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2 class="reveal">¿Te pedimos <em>cita?</em></h2>
+    <p class="reveal">Escríbenos por WhatsApp y te buscamos hueco.</p>
+    <div class="actions reveal">
+      <a href="https://wa.me/34690860742?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Ykono%20Hair%20Studio" class="btn btn-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg> Reservar por WhatsApp</a>
+      <a href="tel:+34690860742" class="btn btn-outline">Llamar</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contacto">
+  <div class="container">
+    <div class="head">
+      <span class="eyebrow reveal">Contacto</span>
+      <h2 class="title reveal">Te esperamos en <em>Alcobendas</em></h2>
+      <p class="lead reveal">Pide cita por WhatsApp o pásate por la avenida de la Ermita.</p>
+    </div>
+    <div class="c-grid">
+      <div class="c-card reveal">
+        <div class="c-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h3>Dirección</h3><p>Av. de la Ermita, 1, local 5<br>28108 Alcobendas, Madrid</p></div></div>
+        <div class="c-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg></div><div><h3>Teléfono / WhatsApp</h3><a href="tel:+34690860742">690 86 07 42</a></div></div>
+        <div class="c-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div style="flex:1"><h3>Horario</h3><table class="hours"><tr><td>Lunes a viernes</td><td>10:00–19:00</td></tr><tr><td>Sábado</td><td>9:30–14:00</td></tr><tr><td>Domingo</td><td>Cerrado</td></tr></table></div></div>
+
+        <div class="c-actions">
+          <a href="https://wa.me/34690860742?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Ykono%20Hair%20Studio" class="btn btn-wa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg> WhatsApp</a>
+          <a href="tel:+34690860742" class="btn btn-outline">Llamar</a>
+        </div>
+      </div>
+      <div class="map reveal"><iframe title="Mapa de Ykono Hair Studio" src="https://maps.google.com/maps?q=Ykono%20Hair%20Studio%2C%20Avenida%20de%20la%20Ermita%201%2C%20Alcobendas&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="f-top">
+      <div class="f-brand">
+        <a href="#inicio" class="logo"><span class="logo-txt"><span class="logo-mark">Ykono <span>Hair Studio</span></span><span class="logo-sub">Peluquería · Alcobendas</span></span></a>
+        <p>Peluquería en Alcobendas.</p>
+      </div>
+      <div class="f-nav">
+        <div><h4>Navegación</h4><ul><li><a href="#nosotros">Nosotras</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#trabajos">El salón</a></li><li><a href="#contacto">Contacto</a></li></ul></div>
+        <div><h4>Visítanos</h4><ul><li>Av. de la Ermita, 1</li><li>Alcobendas, Madrid</li><li><a href="tel:+34690860742">690 86 07 42</a></li></ul></div>
+      </div>
+    </div>
+    <div class="f-bottom">Propuesta de diseño para <strong>Ykono Hair Studio</strong> - demo, no es el sitio web oficial del negocio.</div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox"></div>
+<a href="https://wa.me/34690860742?text=Hola!%20He%20visto%20vuestra%20web%20y%20me%20gustar%C3%ADa%20pedir%20cita%20en%20Ykono%20Hair%20Studio" class="wa-float" target="_blank" rel="noopener" aria-label="Reservar por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c2.6 1 2.6.7 3.1.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.3-.2-.6-.3ZM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.3A11.8 11.8 0 0 0 1.8 17.7L.2 23.8l6.3-1.6a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.5Z"/></svg></a>
+
+<script>
+  const header=document.getElementById('header');
+  const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>40);
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  const body=document.body, toggle=document.getElementById('menu-toggle');
+  const setMenu=o=>{body.classList.toggle('menu-open',o);toggle.setAttribute('aria-expanded',String(o));};
+  toggle.addEventListener('click',()=>setMenu(!body.classList.contains('menu-open')));
+  document.querySelectorAll('#nav-links a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal,.s-card,.t-card,.g-grid figure').forEach(el=>{el.classList.add('reveal');io.observe(el);});
+  const lb=document.getElementById('lightbox'), lbi=lb.querySelector('img');
+  document.querySelectorAll('.g-grid img').forEach(i=>i.addEventListener('click',()=>{lbi.src=i.src;lbi.alt=i.alt;lb.classList.add('open');}));
+  lb.addEventListener('click',()=>lb.classList.remove('open'));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');setMenu(false);}});
+</script>
+</body>
+</html>
